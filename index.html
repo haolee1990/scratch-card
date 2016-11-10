@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>通用刮刮卡</title>
+	<script src="js/scratchCard.js"></script>
+</head>
+
+<body>
+	<div style="width:640px;height:320px; margin:50px auto; cursor:pointer">
+		<img id="photo" src="image/demo.png" />
+	</div>
+
+	<div id="text" style="text-align:center;padding:20px 0;">刮开区域面积：0%</div>
+
+	<div id="node" style="width:640px; height:200px; font-size:40px; line-height:200px; margin:50px auto; cursor:pointer; text-align:center;">
+		谢谢惠顾
+	</div>
+	<div id="text2" style="text-align:center;padding:20px 0;">刮开区域面积：0%</div>
+
+	<script>
+		createScratchCard('photo', 1, function(f, t) {
+			document.getElementById("text").innerHTML = "刮开区域面积：" + f + "%";
+		});
+
+		createScratchCard('node', 1, function(f, t) {
+			document.getElementById("text2").innerHTML = "刮开区域面积：" + f + "%";
+		});
+	</script>
+</body>
+
+</html>
